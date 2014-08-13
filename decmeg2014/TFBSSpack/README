@@ -1,0 +1,62 @@
+******************************* The TFBSS code *************************************
+
+TFBSS performs Blind Source Separation of (over)determined multiplicative mixtures
+of non-stationary real valued sources.
+
+TFBSS can be downloaded at http://www.irccyn.ec-nantes.fr/~fevotte/TFBSS_pack
+
+TFBSS is based on the joint-diagonalization of whitened and noise-compensated
+Spatial Time-Frequency Distribution (STFD) matrices of the observations,
+corresponding to single auto-terms positions.
+
+------------------------------------------------------------------------------------
+The current main reference  is:
+
+A. Holobar, C. Févotte, C. Doncarli, and D. Zazula,
+"Single autoterms selection for blind source separation in time-frequency plane",
+In 11 e EUSIPCO, Toulouse, France, 3-6 septembre 2002.
+
+The iterative selection of maxima of the criteria in the above paper has been 
+replaced by a more simple and computation friendly gradient approach to be published
+soon. The inner Iterative Joint Diagonalization has not been implemented in TFBSS.
+
+The first paper dealing with joint-diagonalization of STFD matrices is:
+
+A. Belouchrani and M. G. Amin,
+"Blind Source Separation Based on Time-Frequency Signal Representation'',
+IEEE Trans. on Signal Processing, vol. 46. No. 11. pp. 2888-2898. November 1998.
+------------------------------------------------------------------------------------
+
+The TFBSS pack contains the following MATLAB files:
+
+* tfbss.m : main program
+
+* joint_diag.m : performs joint-diagonalization of complex matrices. Available on 
+J.F Cardoso web site (http://www.tsi.enst.fr/~cardoso/stuff.html) and used with
+the kind permission of its author. 
+Copyright owned by J.F Cardoso - cardoso@enst.fr .
+
+* tfrridb.m & window.m : perform TFDs computation. Excerpts from the Matlab 
+Time-Frequency Toolbox and used with the kind permission of their author F. Auger. 
+Copyright owned by F. Auger - f.auger@ieee.org . 
+Download the whole Matlab Time-Frequency Toolbox at:
+http://crttsn.univ-nantes.fr/~auger/tftb.html
+
+* demoTFBSS.m : demo script of TFBSS, separation of 4 noisy instantaneous mixtures of
+3 Time-Varying ARMA sources.
+
+* data.mat : contains the sources used in demoTFBSS.
+
+For a quick overview of TFBSS performance, download all the files in a common 
+directory and call demoTFBSS.m in a MATLAB command window.
+
+Feedback about your tests with real world signals is welcome.
+Please mail me results.
+
+Please report any bug.
+
+Author: C. Févotte (cedric.fevotte@irccyn.ec-nantes.fr)
+Copyright is owned by C. Févotte & A. Holobar
+
+-------------------------------------------------------------------------------------
+TFBSS.m - Sept 9, 2002
