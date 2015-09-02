@@ -1,0 +1,53 @@
+VW:
+
+Crossvalidation: [ 0.63792259  0.71497545  0.74361702  0.71025532]
+Crossvalidation: [ 0.68993957  0.70237316  0.72422259  0.79068085]
+Crossvalidation: [ 0.70239262  0.72618658  0.7405892   0.73429787]
+
+GBDT:
+
+[ 0.9132778   0.92414075  0.90319149  0.90012766]
+[ 0.91568675  0.92045827  0.89545827  0.9106383 ]
+
+**dt, auc_dt, stds**
+
+GradientBoostingClassifier(n_estimators=77, learning_rate=0.08155774020151374, max_depth=3, random_state=0)
+[ 0.91213457  0.93134206  0.90441899  0.91161702]
+
+GradientBoostingClassifier(n_estimators=56, learning_rate=0.17078578334218397, max_depth=2, random_state=0)
+[ 0.9178099   0.91890344  0.8787234   0.90953191]
+
+**dt, auc_dt, stds, device_per_ip**
+GradientBoostingClassifier(n_estimators=77, learning_rate=0.08155774020151374, max_depth=3, random_state=0)
+[ 0.91442104  0.9257365   0.90711948  0.91531915]
+
+{'gbdt_max_depth': 2.0, 'gbdt': 0, 'gbdt_n_estimators': 56.0, 'gbdt_learning_rate': 0.16509048648485297}
+[ 0.9147885   0.92225859  0.89447627  0.90978723]
+
+**dt, auc_dt, stds, device_per_ip, device_per_auc**
+[ 0.91874898  0.93187398  0.8943126   0.90604255]
+
+columns = ['auctions', 'countries', 'devices', 'ips', 'merchandises', 'total', 'proba',
+               'device_per_ip_min', 'device_per_ip_max', 'device_per_ip_mean', 'device_per_ip_std',
+               'device_per_auc_min', 'device_per_auc_max', 'device_per_auc_mean', 'device_per_auc_std',
+               'auc_countries', 'auc_devices', 'auc_ips', 'auc_total',
+               'dt_max', 'dt_mean', 'dt_min',  'dt_std',
+               'auc_dt_max', 'auc_dt_mean', 'auc_dt_min', 'auc_dt_std_min', 'auc_dt_std_max', 'auc_dt_std_mean',
+    ]
+Best {'n_estimators': 40, 'learning_rate': 0.08740630845952124, 'max_depth': 3}
+Crossvalidation: [ 0.91621754  0.94525368  0.90838789  0.91089362]
+
+columns = ['auctions', 'countries', 'devices', 'ips', 'merchandises', 'total', 'proba',
+               'ip_devices_min', 'ip_devices_max', 'ip_devices_mean', 'ip_devices_std',
+               'ip_total',
+               'auc_devices_min', 'auc_devices_max', 'auc_devices_mean', 'auc_devices_std',
+               'auc_countries_min', 'auc_countries_max', 'auc_countries_mean', 'auc_countries_std',
+               'auc_ips_min', 'auc_ips_max', 'auc_ips_mean', 'auc_ips_std',
+               'auc_total',
+               'dt_max', 'dt_mean', 'dt_min',  'dt_std',
+               'auc_dt_max', 'auc_dt_mean', 'auc_dt_min', 'auc_dt_std_min', 'auc_dt_std_max', 'auc_dt_std_mean',
+    ]
+Best {'n_estimators': 47, 'learning_rate': 0.08740630845952124, 'max_depth': 3}
+Crossvalidation: [ 0.91764658  0.95020458  0.91423895  0.90387234]
+Best {'n_estimators': 109, 'learning_rate': 0.08739869183284882, 'max_depth': 3}
+Crossvalidation: [ 0.91687081  0.94414894  0.91526187  0.90506383]
